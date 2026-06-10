@@ -59,13 +59,7 @@ npm run dev
 
 ```bash
 cd backend
-python -m src.train \
-    --data_dir "dataset/BraTS2020" \
-    --extra_data "dataset/BraTS2021" \
-    --val_dir "dataset/BraTS_validationData" \
-    --pretrained checkpoints/hg_mfnet_pretrained.pth \
-    --epochs 100 \
-    --batch_size 1
+python -m src.train --data_dir "dataset/BraTS2020" --extra_data "dataset/BraTS2021" --val_dir "dataset/BraTS_validationData" --pretrained checkpoints/hg_mfnet_pretrained.pth --epochs 100 --batch_size 1
 ```
 
 > ⚠️ 训练需要先下载 BraTS 数据集并放置到 `backend/dataset/` 目录下，详见下方[数据集准备](#2-下载数据集)。
