@@ -283,8 +283,15 @@ npm run dev
 
 训练后的模型权重文件（.pth）约 320MB，超过 Git 限制，通过以下方式获取：
 
-- **网盘下载**: [百度网盘 / Google Drive 链接]（替换为实际链接）
-- **自行训练**: 按照上方训练步骤在 BraTS 数据集上训练
+- **百度网盘**: [点击下载](https://pan.baidu.com/s/1-8LzEUyIt4zexgo_kYzoTg?pwd=1025)  提取码: `1025`
+- **自行训练**: 按照上方训练步骤在 BraTS 数据集上训练（预估 ~34 小时，NVIDIA RTX 4060 8GB）
+
+网盘内容说明：
+
+| 文件 | 用途 |
+|------|------|
+| `hg_mfnet_best.pth` | 最佳模型权重（Mean Dice 0.7682），直接用于推理部署 |
+| `hg_mfnet_pretrained.pth` | MONAI 预训练权重，用于从头/继续训练 |
 
 最终部署使用的权重文件应放置于：
 
