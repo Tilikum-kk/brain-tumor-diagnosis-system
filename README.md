@@ -28,7 +28,49 @@
 │  └──────────────────────────────────────────┘    │
 └──────────────────────────────────────────────────┘
 ```
+---
 
+## 🚀 启动命令速览
+
+在项目根目录下，按顺序执行：
+
+### 1. 启动后端服务
+
+```bash
+cd backend
+python main.py --host 0.0.0.0 --port 8000
+```
+
+启动后访问：
+- API 文档: http://localhost:8000/docs
+- 默认管理员: `admin` / `admin123`
+
+### 2. 启动前端（新开终端）
+
+```bash
+cd frontend
+npm install        # 首次运行需安装依赖
+npm run dev
+```
+
+启动后访问: http://localhost:5173
+
+### 3. 训练模型（可选，需 GPU）
+
+```bash
+cd backend
+python -m src.train \
+    --data_dir "dataset/BraTS2020" \
+    --extra_data "dataset/BraTS2021" \
+    --val_dir "dataset/BraTS_validationData" \
+    --pretrained checkpoints/hg_mfnet_pretrained.pth \
+    --epochs 100 \
+    --batch_size 1
+```
+
+> ⚠️ 训练需要先下载 BraTS 数据集并放置到 `backend/dataset/` 目录下，详见下方[数据集准备](#2-下载数据集)。
+
+---
 ---
 
 ## 项目结构
