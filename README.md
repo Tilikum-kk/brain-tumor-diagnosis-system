@@ -62,7 +62,7 @@ brain-tumor-diagnosis-system/
 │   ├── dataset/                    # [不上传] 数据集目录
 │   ├── uploads/                    # [不上传] 用户上传文件
 │   ├── reports/                    # [不上传] 生成的 PDF 报告
-│   ├── checkpoints/                # [不上传] 模型权重
+│   ├── checkpoints/                # [不上传] 模型权重,提供预训练模型参考，可通过百度网盘下载我的训练模型权重
 │   └── logs/                       # [不上传] 训练日志与 checkpoint
 │
 ├── frontend/                       # 前端应用
